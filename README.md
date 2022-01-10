@@ -49,6 +49,7 @@ The control-server is a OpenVPN server that your workstation will connect to. Th
 2. Login to the control-server and download proxycannon-ng:  
 ```git clone https://github.com/proxycannon/proxycannon-ng```
 3. cd into proxycannon-ng/setup and run `sudo ./install.sh`
+4. run `cat /home/ubuntu/.ssh/authorized_keys > /root/.ssh/authorized_keys`
 
 #### 3. Create a new IAM user, set the needed permissions, and copy over your keys. It's quick:
 1. In the AWS console, go to **services** (upper left)
