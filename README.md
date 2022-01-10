@@ -62,7 +62,7 @@ The control-server is a OpenVPN server that your workstation will connect to. Th
 [default]
 aws_access_key_id = REPLACE_WITH_YOUR_OWN
 aws_secret_access_key = REPLACE_WITH_YOUR_OWN
-region = us-east-2
+region = ap-southeast-2
 ```
 
 #### 4. Setup terraform
