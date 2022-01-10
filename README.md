@@ -67,9 +67,9 @@ region = us-east-2
 
 #### 4. Setup terraform
 Perform the following on the control-server:
-1. Copy your proxycannon.pem SSH key into `~/.ssh/proxycannon.pem`
+1. Copy your proxycannon.pem SSH key into `~/.ssh/proxycannon.pem` (yes you need it both on your client machine and your AWS instance)
 2. cd into `proxycannon-ng/nodes/aws` and edit the `variables.tf` file updating it with the **subnet_id**. This is the same subnet_id that your control server is using. You can get this value from the AWS console when viewing the details of the control-server instance. Defining this subnet_id makes sure all launched exit-nodes are in the same subnet as your control server.
-2. Run `terraform init` to download the AWS modules. (you only need to do this once)
+2. Run `terraform init -verify-plugins=false` to download the AWS modules. (you only need to do this once)
 
 #### 5. Copy OpenVPN files to your workstation
 Copy the following files from the control-server to the `/etc/openvpn` directory on your workstation:
