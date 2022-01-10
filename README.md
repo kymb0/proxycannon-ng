@@ -80,6 +80,14 @@ Copy the following files from the control-server to the `/etc/openvpn` directory
 - /etc/openvpn/easy-rsa/keys/client01.crt
 - /etc/openvpn/easy-rsa/keys/client01.key  
 
+```
+sudo scp -i "proxycannon.pem" root@ec2-3-25-229-22.ap-southeast-2.compute.amazonaws.com:~/proxycannon-client.conf /etc/openvpn
+sudo scp -i "proxycannon.pem" root@ec2-3-25-229-22.ap-southeast-2.compute.amazonaws.com:/etc/openvpn/easy-rsa/keys/ta.key /etc/openvpn
+sudo scp -i "proxycannon.pem" root@ec2-3-25-229-22.ap-southeast-2.compute.amazonaws.com:/etc/openvpn/easy-rsa/keys/ca.crt /etc/openvpn
+sudo scp -i "proxycannon.pem" root@ec2-3-25-229-22.ap-southeast-2.compute.amazonaws.com:/etc/openvpn/easy-rsa/keys/client01.crt /etc/openvpn
+sudo scp -i "proxycannon.pem" root@ec2-3-25-229-22.ap-southeast-2.compute.amazonaws.com:/etc/openvpn/easy-rsa/keys/client01.key /etc/openvpn
+```
+
 Test OpenVPN connectivity from your workstation by running:
 ```
 openvpn --config proxycannon-client.conf
