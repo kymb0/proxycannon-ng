@@ -45,7 +45,7 @@ The control-server is a OpenVPN server that your workstation will connect to. Th
 5. Download and save the key to **~/.ssh/proxycannon.pem**
 
 #### 2. Launch the control-server instance
-1. Launch (1) Ubuntu Server t1-micro instance, recommend public AMI ami-0f65671a86f061fcd, and use the "proxycannon" keypair.
+1. Launch (1) Ubuntu Server t1-micro instance, recommend public AMI ubuntu 18.04 ami-07a3bd4944eb120a, and use the "proxycannon" keypair.
 2. Login to the control-server and download proxycannon-ng:  
 ```git clone https://github.com/proxycannon/proxycannon-ng```
 3. cd into proxycannon-ng/setup and run `sudo ./install.sh`
