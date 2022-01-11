@@ -108,7 +108,7 @@ Scaling of exit-nodes is controlled on the control-server using terraform.
 To create AWS exit-nodes, do the following:
 1. cd into `proxycannon-ng/nodes/aws`
 2. Edit the count value in `variables.tf` to the number of exit-nodes (source IPs) you'd like
-3. Edit the first few lines of `main.tf` to reflect our new region details: region = "ap-southeast-2" ami="ami-07a3bd4944eb120a0"
+3. Edit the first few lines of `main.tf` to reflect our new region details: `region = "ap-southeast-2"` `ami="ami-07a3bd4944eb120a0"`
 4. run `terraform apply` to launch the instances.
 
 ### Scale down exit-nodes
