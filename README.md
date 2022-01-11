@@ -98,6 +98,7 @@ If routing is not working, put the below in a file on your control server and ru
 sysctl -w net.ipv4.ip_forward=1
 ip rule add from 10.10.10.0/24 table loadb
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+echo 1 > /proc/sys/net/ipv4/fib_multipath_hash_policy
 ```
 
 **Setup Completed! yay!** From now on you'll only need to connect to the VPN to use proxycannon-ng. The next section details how to add and remove exit-nodes (source IPs):
